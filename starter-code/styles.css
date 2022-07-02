@@ -237,35 +237,51 @@ body.light {
 }
 
 #profile-picture {
-    width: 8rem;
-    height: 8rem;
+    width: 6rem;
+    height: 6rem;
     border-radius: 50%;
-    margin-top: 2rem;
+    float: left;
+    margin-right: 2.2rem;
 }
 
 .main-info {
-    width: 78%;
-    height: 6rem;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    align-self: end;
-    margin-left: 1.8rem;
-    margin-bottom: 3.5rem;
-    text-align: left;
+    flex-wrap: wrap;
 }
 
-.main-info div {
-    align-items: center;
+.main-info div:nth-child(1) {
+    text-align: left;
+    width: 50%;
+    margin-top: 2rem;
+}
+
+.main-info div:nth-child(2) {
+    width: 50%;
+    margin-top: 2rem;
+}
+
+.main-info div:nth-child(2)>p {
+    margin: 0;
+    padding-top: 0.4rem;
+    text-align: right;
+}
+
+.main-info div:nth-child(3) {
+    width: 100%;
+}
+
+.main-info div:nth-child(3)>p {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
 }
 
 .main-info div:nth-child(1)>h2 {
-    margin-bottom: 0;
+    margin: 0;
 }
 
 .main-info div:nth-child(1)>h4 {
     margin: 0;
-    margin-top: 1.7rem;
 }
 
 .main-info div:nth-child(1)>h4.dark,
@@ -279,10 +295,6 @@ body.light {
 
 .main-info div:nth-child(1)>p.light {
     color: hsl(217, 20%, 51%);
-}
-
-.main-info div:nth-child(2)>p {
-    margin-top: 1.6rem;
 }
 
 .main-info div:nth-child(2)>p.dark {
@@ -305,7 +317,7 @@ body.light {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    width: 72%;
+    width: 70%;
     align-self: end;
     margin-right: 2rem;
 }
@@ -436,6 +448,17 @@ body.light {
         width: 90%;
     }
 
+    .search-field>div {
+        width: 100%;
+    }
+
+    #magnifying-glass {
+        margin-left: .3rem;
+        margin-right: .3rem;
+    }
+
+    .search-field>div>input {}
+
     .user-details-container {
         width: 100%;
         flex-direction: column;
@@ -462,7 +485,7 @@ body.light {
     }
 
     #profile-picture {
-        margin-top: 2rem;
+        /* margin-top: 2rem; */
     }
 
     .main-info {
@@ -474,8 +497,24 @@ body.light {
         text-align: left;
     }
 
+    .main-info div:nth-child(1),
+    .main-info div:nth-child(2),
+    .main-info div:nth-child(3) {
+        width: 100%;
+    }
+
+    .main-info>div:nth-child(2) {
+        margin-top: 0;
+    }
+
     .main-info>div:nth-child(2)>p {
         margin: 0;
+        text-align: right;
+        padding-right: 1.1rem;
+    }
+
+    .main-info>div:nth-child(3)>p {
+        margin-top: 1.5rem;
     }
 
     .right {
@@ -486,6 +525,7 @@ body.light {
         gap: 0;
         margin-top: 1rem;
         margin-bottom: 2rem;
+        flex-direction: column;
     }
 
     .contacts>div {
@@ -512,6 +552,10 @@ body.light {
         width: 80%;
     }
 
+    .search-field>div {
+        width: 100%;
+    }
+
     .user-details-container {
         width: 100%;
         flex-direction: column;
@@ -537,25 +581,61 @@ body.light {
         gap: 2rem;
     }
 
-    #profile-picture {
+    /* #profile-picture {
         margin-top: 2rem;
-    }
+    } */
 
     .main-info {
-        flex-direction: column;
+        flex-direction: row;
         justify-content: space-evenly;
     }
 
-    .main-info>div {
+    /* .main-info>div {
         text-align: left;
     }
 
     .main-info>div:nth-child(2)>p {
         margin: 0;
+    } */
+
+    .main-info>div {
+        text-align: left;
+    }
+
+    .main-info div:nth-child(1) {
+        width: 60%;
+    }
+
+    .main-info div:nth-child(2) {
+        width: 40%;
+        margin-top: 2rem;
+    }
+
+    .main-info div:nth-child(3) {
+        width: 100%;
+    }
+
+    /* .main-info>div:nth-child(2) {
+        margin-top: 0;
+    } */
+
+    .main-info>div:nth-child(2)>p {
+        margin: 0;
+        text-align: right;
+        padding-right: 1.1rem;
+    }
+
+    .main-info>div:nth-child(3)>p {
+        margin-top: 1.5rem;
     }
 
     .right {
         width: 85%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin-right: 0;
+        align-self: auto;
     }
 
     .contacts {
