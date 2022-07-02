@@ -7,7 +7,10 @@ body {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    color: white;
+}
+
+body.dark {
+    color: hsl(0, 0%, 100%);
 }
 
 #background {
@@ -17,7 +20,10 @@ body {
     align-items: center;
     width: 100%;
     height: 100%;
-    background-color: hsl(222, 40%, 13%);
+}
+
+#background.dark {
+    background-color: hsl(220, 40%, 13%);
 }
 
 .page-container {
@@ -60,6 +66,16 @@ body {
     cursor: pointer;
 }
 
+.light-toggle>svg {
+    fill: hsl(0, 0%, 100%);
+}
+
+.light-toggle:hover,
+.light-toggle>svg:hover {
+    color: hsl(222, 44%, 70%);
+    fill: hsl(222, 44%, 70%);
+}
+
 #light,
 #dark {
     width: fit-content;
@@ -74,8 +90,11 @@ body {
 }
 
 .search-bar-container {
-    background-color: hsl(224, 40%, 20%);
     height: 3.5rem;
+}
+
+.search-bar-container.dark {
+    background-color: hsl(222, 41%, 20%);
 }
 
 .search-bar {
@@ -110,7 +129,14 @@ body {
 .search-field>input::placeholder {
     font-family: 'Space Mono', monospace;
     font-size: 1rem;
-    color: hsl(223, 21%, 71%);
+}
+
+.search-field>input.dark::placeholder {
+    color: hsl(0, 0%, 100%);
+}
+
+.search-field>input:focus {
+    outline: none;
 }
 
 #search-btn {
@@ -120,16 +146,21 @@ body {
     width: 5rem;
     height: 2.5rem;
     margin-right: .5rem;
-    background-color: hsl(212, 99%, 50%);
-    color: white;
+    background-color: hsl(212, 100%, 50%);
+    color: hsl(0, 0%, 100%);
     font: inherit;
     font-size: .8rem;
     font-weight: 400;
     letter-spacing: .06rem;
 }
 
-.user-details-container {
-    background-color: hsl(224, 40%, 20%);
+#search-btn:hover {
+    cursor: pointer;
+    background-color: hsl(212, 100%, 69%);
+}
+
+.user-details-container.dark {
+    background-color: hsl(222, 41%, 20%);
 }
 
 .left {
@@ -166,25 +197,34 @@ body {
 }
 
 .main-info div:nth-child(1)>h4 {
-    color: hsl(216, 60%, 42%);
     margin: 0;
 }
 
-.main-info div:nth-child(1)>p {
-    color: hsl(224, 14%, 63%);
+.main-info div:nth-child(1)>h4.dark {
+    color: hsl(212, 100%, 50%);
+}
+
+.main-info div:nth-child(1)>p.dark {
+    color: hsl(0, 0%, 100%);
 }
 
 .main-info div:nth-child(2)>p {
-    color: hsl(224, 14%, 63%);
     margin-top: 1.6rem;
+}
+
+.main-info div:nth-child(2)>p.dark {
+    color: hsl(0, 0%, 100%);
 }
 
 .account-info {
     display: flex;
-    background-color: hsl(222, 40%, 13%);
     border-radius: 10px;
     justify-content: center;
     height: 5rem;
+}
+
+.account-info.dark {
+    background-color: hsl(222, 40%, 13%);
 }
 
 .account-info>table {
@@ -228,10 +268,14 @@ body {
     height: fit-content;
 }
 
-#location>span>svg,
-#github-link>span>svg,
-#company>span>svg {
+#location>span>svg.dark,
+#github-link>span>svg.dark,
+#company>span>svg.dark {
     fill: hsl(180, 100%, 100%);
+}
+
+#twitter-icon {
+    fill: hsl(226, 13%, 61%);
 }
 
 #location>p,
@@ -241,11 +285,17 @@ body {
     padding-left: .7rem;
     font-size: .8rem;
     letter-spacing: .1rem;
-    color: hsl(222, 31%, 78%);
 }
 
-#twitter-icon {
-    fill: hsl(226, 13%, 61%);
+#location>p.dark,
+#github-link>p.dark,
+#company>p.dark {
+    color: hsl(0, 0%, 100%);
+}
+
+#github-link>p.dark:hover {
+    text-decoration: underline;
+    text-decoration-color: hsl(0, 0%, 100%);
 }
 
 #twitter-text {
