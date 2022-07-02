@@ -37,3 +37,8 @@ function toggleTheme() {
         });
     }
 }
+
+function showError() {
+    let error = document.getElementById('error');
+    error.style.display = "block";
+}

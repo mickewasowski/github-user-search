@@ -67,6 +67,7 @@ body.light {
 .light-toggle,
 .dark-toggle {
     margin: 0;
+    font-weight: 700;
 }
 
 .dark-toggle {
@@ -144,9 +145,16 @@ body.light {
     width: 85%;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
-.search-field>input {
+.search-field>div {
+    display: flex;
+    width: 70%;
+    align-items: center;
+}
+
+.search-field>div>input {
     background: none;
     border: none;
     width: 60%;
@@ -154,29 +162,33 @@ body.light {
     font-family: inherit;
 }
 
-.search-field>input.dark {
+.search-field>div>input.dark {
     color: hsl(0, 0%, 100%);
 }
 
-.search-field>input.light {
+.search-field>div>input.light {
     color: hsl(220, 18%, 16%);
 }
 
-.search-field>input::placeholder {
+.search-field>div>input::placeholder {
     font-family: 'Space Mono', monospace;
     font-size: 1rem;
 }
 
-.search-field>input.dark::placeholder {
+.search-field>div>input.dark::placeholder {
     color: hsl(0, 0%, 100%);
 }
 
-.search-field>input.light::placeholder {
+.search-field>div>input.light::placeholder {
     color: hsl(220, 18%, 16%);
 }
 
-.search-field>input:focus {
+.search-field>div>input:focus {
     outline: none;
+}
+
+#error {
+    color: hsl(0, 92%, 62%);
 }
 
 #search-btn {
