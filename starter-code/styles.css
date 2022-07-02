@@ -337,7 +337,7 @@ body.light {
     margin: 0;
     padding-left: .7rem;
     font-size: .8rem;
-    letter-spacing: .1rem;
+    /* letter-spacing: .1rem; */
 }
 
 #location>p.dark,
@@ -368,4 +368,58 @@ body.light {
     font-size: .8rem;
     letter-spacing: .1rem;
     color: hsl(226, 13%, 61%);
+}
+
+@media (min-width: 320px) and (max-width: 600px) {}
+
+@media (min-width: 601px) and (max-width: 1200px) {
+    .page-container {
+        width: 80%;
+    }
+
+    .user-details-container {
+        width: 100%;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .left {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 85%;
+        height: fit-content;
+    }
+
+    .left>p {
+        text-align: left;
+        margin-bottom: 2rem;
+    }
+
+    .profile-details {
+        display: flex;
+        gap: 2rem;
+    }
+
+    #profile-picture {
+        margin-top: 2rem;
+    }
+
+    .main-info {
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .main-info>div {
+        text-align: left;
+    }
+
+    .main-info>div:nth-child(2)>p {
+        margin: 0;
+    }
+
+    .right {
+        width: 85%;
+    }
 }
