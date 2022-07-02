@@ -1,35 +1,39 @@
 function toggleTheme() {
-    let toggleItems = Array.from(document.getElementById('toggle-btns').children);
-    let current = toggleItems.filter(x => x.style.display === "block");
-    let toBeOn = toggleItems.filter(x => x.style.display === "none");
+    let current = event.target.classList[0];
 
-    let background = document.getElementById('background');
-    let searchBar = document.getElementsByClassName("search-bar-container")[0];
-    let userDetails = document.getElementsByClassName("user-details-container")[0];
+    if (current === "light-toggle") {
+        let darkElements = Array.from(document.getElementsByClassName("dark"));
+        darkElements.forEach((x) => {
+            x.classList.remove('dark');
+            x.classList.add('light');
+        });
 
+        let currentBtns = Array.from(document.getElementsByClassName('light-toggle'));
+        currentBtns.forEach((x) => {
+            console.log(x);
+            x.style.display = "none";
+        });
 
-    //placeholder light theme color 214°, 15%, 59%
-
-
-    if (current[0].classList.contains("light-toggle")) {
-        document.body.style.color = "black";
-        background.style.backgroundColor = "hsl(222,100%,98%)";
-        searchBar.style.backgroundColor = "hsl(240,100%,100%)";
-        userDetails.style.backgroundColor = "hsl(240,100%,100%)";
-    } else {
-        document.body.style.color = "white";
-        background.style.backgroundColor = "hsl(222,40%,13%)";
-        searchBar.style.backgroundColor = "hsl(224,40%,20%)";
-        userDetails.style.backgroundColor = "hsl(224,40%,20%)";
+        let nextBtns = Array.from(document.getElementsByClassName("dark-toggle"));
+        nextBtns.forEach((x) => {
+            x.style.display = "block";
+        });
     }
+    else if (current === "dark-toggle") {
+        let darkElements = Array.from(document.getElementsByClassName("light"));
+        darkElements.forEach((x) => {
+            x.classList.remove('light');
+            x.classList.add('dark');
+        });
 
-    current.forEach(e => {
-        e.style.display = "none";
-    });
+        let currentBtns = Array.from(document.getElementsByClassName('dark-toggle'));
+        currentBtns.forEach((x) => {
+            x.style.display = "none";
+        });
 
-    toBeOn.forEach(e => {
-        e.style.display = "block";
-    });
-
-
+        let nextBtns = Array.from(document.getElementsByClassName("light-toggle"));
+        nextBtns.forEach((x) => {
+            x.style.display = "block";
+        });
+    }
 }
