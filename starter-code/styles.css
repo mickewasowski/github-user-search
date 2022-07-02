@@ -448,6 +448,17 @@ body.light {
         width: 90%;
     }
 
+    .search-field>div {
+        width: 100%;
+    }
+
+    #magnifying-glass {
+        margin-left: .3rem;
+        margin-right: .3rem;
+    }
+
+    .search-field>div>input {}
+
     .user-details-container {
         width: 100%;
         flex-direction: column;
@@ -539,6 +550,10 @@ body.light {
 @media (min-width: 601px) and (max-width: 1200px) {
     .page-container {
         width: 80%;
+    }
+
+    .search-field>div {
+        width: 100%;
     }
 
     .user-details-container {
