@@ -13,6 +13,10 @@ body.dark {
     color: hsl(0, 0%, 100%);
 }
 
+body.light {
+    color: hsl(220, 18%, 16%);
+}
+
 #background {
     display: flex;
     flex-direction: row;
@@ -24,6 +28,10 @@ body.dark {
 
 #background.dark {
     background-color: hsl(220, 40%, 13%);
+}
+
+#background.light {
+    background-color: hsl(227, 100%, 98%);
 }
 
 .page-container {
@@ -61,6 +69,10 @@ body.dark {
     margin: 0;
 }
 
+.dark-toggle {
+    color: hsl(217, 20%, 51%);
+}
+
 .light-toggle:hover,
 .dark-toggle:hover {
     cursor: pointer;
@@ -70,10 +82,20 @@ body.dark {
     fill: hsl(0, 0%, 100%);
 }
 
+.dark-toggle>svg {
+    fill: hsl(217, 20%, 51%);
+}
+
 .light-toggle:hover,
 .light-toggle>svg:hover {
     color: hsl(222, 44%, 70%);
     fill: hsl(222, 44%, 70%);
+}
+
+.dark-toggle:hover,
+.dark-toggle>svg:hover {
+    color: hsl(220, 18%, 16%);
+    fill: hsl(220, 18%, 16%);
 }
 
 #light,
@@ -95,6 +117,10 @@ body.dark {
 
 .search-bar-container.dark {
     background-color: hsl(222, 41%, 20%);
+}
+
+.search-bar-container.light {
+    background-color: hsl(0, 0%, 100%);
 }
 
 .search-bar {
@@ -135,6 +161,10 @@ body.dark {
     color: hsl(0, 0%, 100%);
 }
 
+.search-field>input.light::placeholder {
+    color: hsl(220, 18%, 16%);
+}
+
 .search-field>input:focus {
     outline: none;
 }
@@ -161,6 +191,10 @@ body.dark {
 
 .user-details-container.dark {
     background-color: hsl(222, 41%, 20%);
+}
+
+.user-details-container.light {
+    background-color: hsl(0, 0%, 100%);
 }
 
 .left {
@@ -200,12 +234,17 @@ body.dark {
     margin: 0;
 }
 
-.main-info div:nth-child(1)>h4.dark {
+.main-info div:nth-child(1)>h4.dark,
+.main-info div:nth-child(1)>h4.light {
     color: hsl(212, 100%, 50%);
 }
 
 .main-info div:nth-child(1)>p.dark {
     color: hsl(0, 0%, 100%);
+}
+
+.main-info div:nth-child(1)>p.light {
+    color: hsl(217, 20%, 51%);
 }
 
 .main-info div:nth-child(2)>p {
@@ -214,6 +253,10 @@ body.dark {
 
 .main-info div:nth-child(2)>p.dark {
     color: hsl(0, 0%, 100%);
+}
+
+.main-info div:nth-child(2)>p.light {
+    color: hsl(217, 20%, 51%);
 }
 
 .account-info {
@@ -225,6 +268,10 @@ body.dark {
 
 .account-info.dark {
     background-color: hsl(222, 40%, 13%);
+}
+
+.account-info.light {
+    background-color: hsl(227, 100%, 98%);
 }
 
 .account-info>table {
@@ -274,6 +321,12 @@ body.dark {
     fill: hsl(180, 100%, 100%);
 }
 
+#location>span>svg.light,
+#github-link>span>svg.light,
+#company>span>svg.light {
+    fill: hsl(217, 35%, 45%);
+}
+
 #twitter-icon {
     fill: hsl(226, 13%, 61%);
 }
@@ -293,9 +346,20 @@ body.dark {
     color: hsl(0, 0%, 100%);
 }
 
+#location>p.light,
+#github-link>p.light,
+#company>p.light {
+    color: hsl(217, 35%, 45%);
+}
+
 #github-link>p.dark:hover {
     text-decoration: underline;
     text-decoration-color: hsl(0, 0%, 100%);
+}
+
+#github-link>p.light:hover {
+    text-decoration: underline;
+    text-decoration-color: hsl(217, 35%, 45%);
 }
 
 #twitter-text {
